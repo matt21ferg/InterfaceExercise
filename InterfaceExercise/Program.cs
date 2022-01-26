@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace InterfaceExercise
 {
@@ -36,9 +37,59 @@ namespace InterfaceExercise
                  * Then, Set each class to inherit from both IVehicle and ICompany and implement their members.
                  * 
                  */
-
+                var Fusion = new Car();
+            {
+                Fusion.name = "Fusion";
+                Fusion.GoodMPG = true;
+                Fusion.HasTrunk = true;
+                Fusion.NumberOfWheels = 4;
+                Fusion.NumberOfWindows = 4;
+                Fusion.HasSteeringWheel = true;
+                Fusion.NumberOfSeats = 5;
+                Fusion.CompanyName = "Ford";
+                Fusion.Logo = "the word Ford";
+            }
+                var Tahoe = new SUV();
+            {
+                Tahoe.name = "Tahoe";
+                Tahoe.NumberOfSeats = 8;
+                Tahoe.NumberOfWheels = 4;
+                Tahoe.HasSkiRack = true;
+                Tahoe.HasCargoTrunk = true;
+                Tahoe.NumberOfWindows = 6;
+                Tahoe.CompanyName = "Chevy";
+                Tahoe.Logo = "the word Chevy";
+                Tahoe.HasSteeringWheel  = true;
+            }
+                var Raptor = new Truck();
+            {
+                Raptor.name = "Raptor";
+                Raptor.NumberOfSeats = 4;
+                Raptor.NumberOfWindows = 4;
+                Raptor.NumberOfWheels = 4;
+                Raptor.BedSize = "big bed";
+                Raptor.HasSteeringWheel = true;
+                Raptor.CompanyName = "Ford";
+                Raptor.HasHitch = true;
+                Raptor.HasSteeringWheel = true;
+            }
             //Now, create objects of your 3 classes and give their members values;
             //Creatively display and organize their values
+            var Carlot = new List<IVehicle>();
+            Carlot.Add(Fusion);
+            Carlot.Add(Tahoe);
+            Carlot.Add(Raptor);
+            foreach (var item in Carlot)
+            {
+                Console.WriteLine($"the model of the vehicle: {item.name}");
+                Console.WriteLine($"number of seats: {item.NumberOfSeats} ");
+                Console.WriteLine($"number of windows: {item.NumberOfWindows} ");
+                Console.WriteLine($"number of wheels: {item.NumberOfWheels}");
+                Console.WriteLine($"does it have steering wheel: {item.HasSteeringWheel}");
+                Console.WriteLine("");
+                
+                    
+            }
         }
     }
 }
