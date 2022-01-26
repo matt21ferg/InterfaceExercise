@@ -39,7 +39,7 @@ namespace InterfaceExercise
                  */
                 var Fusion = new Car();
             {
-                Fusion.name = "Fusion";
+                Fusion.name = "Ford Fusion";
                 Fusion.GoodMPG = true;
                 Fusion.HasTrunk = true;
                 Fusion.NumberOfWheels = 4;
@@ -51,7 +51,7 @@ namespace InterfaceExercise
             }
                 var Tahoe = new SUV();
             {
-                Tahoe.name = "Tahoe";
+                Tahoe.name = "Chevy Tahoe";
                 Tahoe.NumberOfSeats = 8;
                 Tahoe.NumberOfWheels = 4;
                 Tahoe.HasSkiRack = true;
@@ -63,7 +63,7 @@ namespace InterfaceExercise
             }
                 var Raptor = new Truck();
             {
-                Raptor.name = "Raptor";
+                Raptor.name = "Ford Raptor";
                 Raptor.NumberOfSeats = 4;
                 Raptor.NumberOfWindows = 4;
                 Raptor.NumberOfWheels = 4;
@@ -81,7 +81,7 @@ namespace InterfaceExercise
             Carlot.Add(Raptor);
             foreach (var item in Carlot)
             {
-                Console.WriteLine($"the model of the vehicle: {item.name}");
+                Console.WriteLine($"the Name of the vehicle: {item.name}");
                 Console.WriteLine($"number of seats: {item.NumberOfSeats} ");
                 Console.WriteLine($"number of windows: {item.NumberOfWindows} ");
                 Console.WriteLine($"number of wheels: {item.NumberOfWheels}");
